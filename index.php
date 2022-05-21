@@ -13,11 +13,15 @@
 </head>
 <body>
     <nav>
-        <ul>
-            <li><a href="index.php">Home</a></li>
-            <li><a href="about.php">About</a></li>
-            <li><a href="contact.php">Contact</a></li>
-        </ul>
+        <div class="logo">
+            Logo
+        </div>
+        <div class="links">
+            <a href="">Link 1</a>
+            <a href="">Link 2</a>
+            <a href="">Link 3</a>
+            <a href="">Link 4</a>
+        </div>
 
 
     </nav>
