@@ -7,9 +7,9 @@ CREATE TABLE users (
     `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
     `banned` BOOL DEFAULT FALSE NOT NULL,
     `vootos` INT(5) DEFAULT 0 NOT NULL,
-    -- 'vootos' means 'violations of our terms of service'
-    `level` INT DEFAULT 0 NOT NULL
-    `points` INT DEFAULT 0 NOT NULL
+    -- 'vootos' means 'violations of our terms of service',
+    `level` INT DEFAULT 0 NOT NULL,
+    `points` INT DEFAULT 0 NOT NULL,
     `admin` BOOL DEFAULT FALSE NOT NULL
 );
 
