@@ -88,19 +88,24 @@ footer .heart {
   color: #DC143C;
 }
 
+/* highlights links on hover */
+a:hover {
+    color: #c1c7c3;
+}
+
 
     </style>
 </head>
 <body>
     <nav>
         <div class="logo">
-            Logo
+            Insane Chess
         </div>
         <div class="links">
-            <a href="">Link 1</a>
-            <a href="">Link 2</a>
-            <a href="">Link 3</a>
-            <a href="">Link 4</a>
+            <a href="">Home</a>
+            <a href="">Login</a>
+            <a href="">Signup</a>
+            <a href="">Play</a>
         </div>
 
 
