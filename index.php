@@ -1,5 +1,5 @@
 <?php
-include_once 'Backend/home.php'; 
+include_once 'Backend/account.php'; 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -107,9 +107,9 @@ a:hover {
         </div>
         <div class="links">
             <a href="">Home</a>
-            <a href="Backend/login.php">Login</a>
-            <a href="Backend/signup.php">Signup</a>
-            <a href="play.php">Play</a>
+            <a href="Backend/login.php">Play</a>
+            <a href="Backend/account.php">My Account</a>
+            <!-- <a href="play.php">Play</a> -->
         </div>
 
 
