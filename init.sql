@@ -6,7 +6,6 @@ CREATE TABLE users (
     `password` VARCHAR(255) NOT NULL,
     `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP,
     `banned` BOOL DEFAULT FALSE NOT NULL,
-    `vootos` INT DEFAULT 0 NOT NULL,
     `level` INT DEFAULT 0 NOT NULL,
     `points` INT DEFAULT 0 NOT NULL,
     `admin` BOOL DEFAULT FALSE NOT NULL
