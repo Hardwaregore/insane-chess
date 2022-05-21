@@ -95,6 +95,7 @@ a:hover {
 
 
     </style>
+    <script src="nav.js"></script>
 </head>
 <body>
     <nav>
