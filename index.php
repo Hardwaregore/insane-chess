@@ -104,9 +104,9 @@ a:hover {
         </div>
         <div class="links">
             <a href="">Home</a>
-            <a href="">Login</a>
-            <a href="">Signup</a>
-            <a href="">Play</a>
+            <a href="Backend/login.php">Login</a>
+            <a href="Backend/signup.php">Signup</a>
+            <a href="play.php">Play</a>
         </div>
 
 
