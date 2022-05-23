@@ -8,6 +8,7 @@
 </head>
 <body>
     <p>You do not have permission to view this page!</p>
+    <img src="trolololol.jpg" alt="">
     <?php 
 
     header("refresh:5;url=logout.php");

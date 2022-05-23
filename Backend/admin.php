@@ -11,16 +11,16 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     exit;
 }
 
-// checks if the user is an admin
-$checkadmin = "SELECT admin FROM users WHERE username = '$username'";
-$adminresult = mysqli_query($conn, $checkadmin);
-$adminrow = mysqli_fetch_assoc($adminresult);
-$admin = $adminrow['admin'];
+// checks if the user is an admin by checking the sql database
+$checkadminagain = "SELECT admin FROM users WHERE username = '".$_SESSION["username"]."'";
+$resultofcheckadminagain = mysqli_query($conn, $checkadminagain);
+$row = mysqli_fetch_assoc($resultofcheckadminagain);
+$admin = $row['admin'];
 
-// if admin is false, redirect to permission-denied.php
-if($admin == "0"){
+if ($admin == 0){
     header("location: permission-denied.php");
 }
+
 
 
 ?>
@@ -36,10 +36,10 @@ if($admin == "0"){
     </style>
 </head>
 <body>
-    <h1 class="my-5">Hi, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Welcome to our site.</h1>
+    <h4 class="my-5">Viewing admin pannel as: <?php echo htmlspecialchars($_SESSION["username"]); ?></h4>
     <p>
-        <a href="reset-password.php" class="btn btn-warning">Reset Your Password</a>
-        <a href="logout.php" class="btn btn-danger ml-3">Sign Out of Your Account</a>
+        <a href="reset-password.php" class="btn btn-warning">Reset Password</a>
+        <a href="logout.php" style="color:#212529;background-color:#ffc107;border-color:#ffc107">Destroy Session</a>
     </p>
 </body>
 </html>

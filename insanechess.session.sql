@@ -1,6 +1,0 @@
-USE `insanechess`;
-
-SHOW DATABASES;
-
-
-

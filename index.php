@@ -1,12 +1,16 @@
 <?php
-include_once 'Backend/account.php'; 
+require_once "Backend/connect.php";
+include_once "Backend/account.php";
+
+// detects if the user is banned by checking the sql database
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"></meta>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+  
     <title>Insane Chess</title>
     <style>
         body {
