@@ -4,26 +4,25 @@
 require_once "connect.php";
 
 
-session_start();
+session_start();;
+
  
 // Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
     exit;
-}
+};
 
 // checks if the user is banned by checking the sql database
-$checkbanned = "SELECT banned FROM users WHERE username = '".$_SESSION["username"]."'";
+$checkbanned = "SELECT banned FROM users WHERE username = '$_SESSION[username]'";
 $resultofcheckbanned = mysqli_query($conn, $checkbanned);
 $row = mysqli_fetch_assoc($resultofcheckbanned);
 $banned = $row['banned'];
 
 if ($banned == 1){
     header("location: ../urbanned.php");
-}
 
-
-
+};
 
 
 ?>
@@ -39,7 +38,7 @@ if ($banned == 1){
     </style>
 </head>
 <body>
-    <h4 class="my-5">Viewing admin pannel as: <?php echo htmlspecialchars($_SESSION["username"]); ?></h4>
+    <h4 class="my-5">Welcome <b><?php echo htmlspecialchars($_SESSION["username"]); ?></br>!</h4>
     <p>
         <a href="reset-password.php" class="btn btn-warning">Reset Password</a>
         <a href="logout.php" class="btn btn-warning">Destroy Session</a>

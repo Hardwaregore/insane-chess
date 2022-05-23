@@ -1,8 +1,25 @@
 <?php
 require_once "Backend/connect.php";
-include_once "Backend/account.php";
+
 
 // detects if the user is banned by checking the sql database
+session_start();
+
+//checks if the user is logged in
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+  $checkbanned = "SELECT banned FROM users WHERE username = '$_SESSION[username]'";
+  $resultofcheckbanned = mysqli_query($conn, $checkbanned);
+  $row = mysqli_fetch_assoc($resultofcheckbanned);
+  $banned = $row['banned'];
+  
+  if ($banned == 1){
+      header("location: ../urbanned.php");
+  
+  };
+}
+
+// checks if the user is banned by checking the sql database
+
 
 
 

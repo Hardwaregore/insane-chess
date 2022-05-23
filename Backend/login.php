@@ -76,7 +76,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
                                 // if admin is false, redirect to index page
                             } else {
-                                header("location: ../index.php");
+                                header("location: checkbanned.php");
                             }
                             
 
