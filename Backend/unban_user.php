@@ -10,12 +10,10 @@
 
     <body>
         <h1>Ban a user</h1>
-        <form action="ban.php" method="post">
+        <form action="unban.php" method="post">
             <label for="username">Username:</label>
             <input type="text" name="username" id="username">
-            <label for="reason">Reason:</label>
-            <input type="text" name="reason" id="reason">
-            <input type="submit" value="Ban">
+            <input type="submit" value="Unban">
         </form>
        
     </body>
