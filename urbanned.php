@@ -19,5 +19,6 @@
         $row = mysqli_fetch_assoc($resultofgetbanreason);
         echo $row['ban_reason'];
     ?>"!</h2>
+    <h3>You may submit a ban appeal <a href="Backend/appeal.php">here</a> to be unbanned.</h3>
 </body>
 </html>

@@ -19,12 +19,10 @@ CREATE TABLE `users` (
     `admin` BOOL DEFAULT FALSE NOT NULL
 );
 
-CREATE TABLE `game` (
-    `game-id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    `white` VARCHAR(255) NOT NULL,
-    `black` VARCHAR(255) NOT NULL,
-    `previous-move` VARCHAR(10) NOT NULL,
-    
+CREATE TABLE `appeals` (
+    `id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    `username` VARCHAR(255) NOT NULL,
+    `reason` VARCHAR(10000) NOT NULL
 )
 
 
