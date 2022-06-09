@@ -41,7 +41,7 @@ if ($banned == 1){
     <h4 class="my-5">Welcome <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>!</h4>
     <p>
         <a href="reset-password.php" class="btn btn-warning">Reset Password</a>
-        <a href="logout.php" class="btn btn-warning">Destroy Session</a>
+        <a href="logout.php" class="btn btn-warning">Logout</a>
     </p>
 </body>
 </html>

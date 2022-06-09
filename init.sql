@@ -22,8 +22,10 @@ CREATE TABLE `users` (
 CREATE TABLE `appeals` (
     `id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     `username` VARCHAR(255) NOT NULL,
-    `reason` VARCHAR(10000) NOT NULL
-)
+    `reason` VARCHAR(10000) NOT NULL,
+    `rejected` BOOL DEFAULT FALSE NOT NULL,
+    `reject_reason` VARCHAR(255) DEFAULT NULL
+);
 
 
 

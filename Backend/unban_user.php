@@ -21,7 +21,7 @@
         <!-- Puts all ban appeals in a table -->
         <!-- Admins can accept or reject the appeal by clinking on each row of the table -->
         <h1>Unban a user</h1>
-            <form action="search.php" method="post">
+            <form action="searchbanned.php" method="post">
                 <!-- search for a banned user -->
                 <input type="text" name="username" placeholder="Username">
                 <button type="submit" value="Search">Search</button>
@@ -34,7 +34,7 @@
                 <th>Accept / Reject Appeal</th>
             </tr>
             <?php
-                $sql = "SELECT * FROM appeals";
+                $sql = "SELECT * FROM appeals WHERE rejected = 0";
                 $result = mysqli_query($conn, $sql);
                 while($row = mysqli_fetch_assoc($result)){
                     echo "<tr>";
