@@ -2,17 +2,17 @@
     "sqltools.connections": [
         {
             "mysqlOptions": {
-                "authProtocol": "xprotocol"
+                "authProtocol": "default"
             },
             "previewLimit": 50,
-            "server": "localhost",
+            "server": "127.0.0.1",
             "port": 3306,
             "driver": "MySQL",
             "name": "localhost",
-            "socketPath": "/var/run/mysqld/mysqld.sock",
             "database": "insanechess",
-            "username": "root",
-            "password": ""
+            "username": "connect",
+            "connectionTimeout": 15,
+            "password": "SQLpasswd1234"
         }
     ]
 }

@@ -1,7 +1,7 @@
 <?php
 $hostname = "localhost";
-$username = "phpconnect";
-$password = "PHPpasswd1234";
+$username = "connect";
+$password = "SQLpasswd1234";
 $database = "insanechess";
 
 
