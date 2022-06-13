@@ -34,7 +34,7 @@
                 <th>Accept / Reject Appeal</th>
             </tr>
             <?php
-                $sql = "SELECT * FROM appeals WHERE rejected = 0";
+                $sql = "SELECT * FROM appeals WHERE rejected = 0 AND accepted = '0'";
                 $result = mysqli_query($conn, $sql);
                 while($row = mysqli_fetch_assoc($result)){
                     echo "<tr>";
