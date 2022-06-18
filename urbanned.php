@@ -5,10 +5,28 @@
     <?php
     require_once "Backend/connect.php";
     session_start();
+
+    // checks if the user is banned
+    $checkbannedagain = "SELECT banned FROM users WHERE username = '$_SESSION[username]';";
+    $result = mysqli_query($conn, $checkbannedagain);
+    $row = mysqli_fetch_assoc($result);
+    if ($row['banned'] == 0) {
+        header("Location: index.php");
+    }
+
+    // checks if the ban type is permanent or temporary
+    $checktype = "SELECT ban_duration FROM users WHERE  username = '$_SESSION[username]';";
+    $result = mysqli_query($conn, $checktype);
+    $row = mysqli_fetch_assoc($result);
+    if ($row['ban_duration'] == 'perm') {
+        $ban_duration = 'perminantly';
+    } else {
+        $ban_duration = 'temporarily';
+    }
      ?>
 </head>
 <body>
-    <h2>Your account <?php echo"$_SESSION[username]"; ?> is perminantly banned from Insane Chess by <?php 
+    <h2>Your account <?php echo"$_SESSION[username]"; ?> is <?php echo "$ban_duration"; ?> banned from Insane Chess by <?php 
         $getbanby = "SELECT banned_by FROM users WHERE username = '$_SESSION[username]'";
         $resultofgetbanby = mysqli_query($conn, $getbanby);
         $row = mysqli_fetch_assoc($resultofgetbanby);
@@ -19,9 +37,12 @@
         $row = mysqli_fetch_assoc($resultofgetbanreason);
         echo $row['ban_reason'];
     ?>"!</h2>
-    <h3>You may submit a ban appeal <a href="Backend/appeal.php">here</a> to be unbanned.</h3>
-    <?php 
-        
+
+    <?php if ($ban_duration == 'perminantly') {
+        echo "<h3>You can not appeal this ban.</h3>";
+        exit;
+    } else {
+        echo "<h3>You may submit a ban appeal <a href='Backend/appeal.php'>here</a> to be unbanned.</h3>";
         // checks if the user has an appeal
         $checkappeal = "SELECT appealed FROM appeals WHERE username = '$_SESSION[username]'";
         $resultofcheckappeal = mysqli_query($conn, $checkappeal);
@@ -84,6 +105,8 @@
         } else {
             echo "<h3>You have not submitted an appeal yet.</h3>";
         }
-    ?>
+    } ?>
+    
+    
 </body>
 </html>

@@ -21,6 +21,7 @@ CREATE TABLE `users` (
 
 CREATE TABLE `appeals` (
     `id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    `appealed` BOOL DEFAULT TRUE NOT NULL,
     `username` VARCHAR(255) NOT NULL,
     `reason` VARCHAR(10000) NOT NULL,
     `rejected` BOOL DEFAULT FALSE NOT NULL,
