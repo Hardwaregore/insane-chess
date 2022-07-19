@@ -40,6 +40,7 @@
 
     <?php if ($ban_duration == 'perminantly') {
         echo "<h3>You can not appeal this ban.</h3>";
+        echo "<a href='Backend/logout.php'>Rage quit</a>";
         exit;
     } else {
         echo "<h3>You may submit a ban appeal <a href='Backend/appeal.php'>here</a> to be unbanned.</h3>";
@@ -105,7 +106,9 @@
         } else {
             echo "<h3>Your appeal has been sent to staff. You will be unbanned once staff has reviewed your appeal.</h3>";
         }
-    } ?>
+    } 
+    echo "<a href='Backend/logout.php'>Rage quit</a>";
+    ?>
     
     
 </body>
