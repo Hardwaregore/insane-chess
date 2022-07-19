@@ -107,8 +107,9 @@
         }
     } 
     // link to logout:
-    echo "<br><a href='Backend/logout.php'>Rage Quit</a>";
+    
     ?>
+    <a href='Backend/logout.php'>Rage Quit</a>
     
     
 </body>
