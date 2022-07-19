@@ -109,7 +109,6 @@
     // link to logout:
     
     ?>
-    <a href='Backend/logout.php'>Rage Quit</a>
     
     
 </body>
