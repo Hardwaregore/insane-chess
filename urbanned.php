@@ -100,10 +100,10 @@
 
         if ($appealed == 1 && $rejected == 1) {
             echo "<h3>Your last appeal was rejected by staff for '$rejectreason'.   NOTE: Spamming appeals may reault In your account being deleted. </h3>";
-        } else if ($accepted == 0 && $rejected == 0) {
-            echo "<h3>Your appeal has been sent to staff. You will be unbanned once staff has reviewed your appeal.</h3>";
-        } else {
+        } else if ($accepted == "null" && $rejected == "null") {
             echo "<h3>You have not submitted an appeal yet.</h3>";
+        } else {
+            echo "<h3>Your appeal has been sent to staff. You will be unbanned once staff has reviewed your appeal.</h3>";
         }
         echo "$appealed $rejected $rejectreason $accepted";
     } ?>
