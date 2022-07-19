@@ -13,7 +13,7 @@
                     echo "User banned!";
                     
                 } else {
-                    echo "Error banning user!";
+                    echo "Error banning user! Please contact the WebServer Host!";
                 }
             }
         ?>
