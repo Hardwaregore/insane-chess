@@ -85,14 +85,13 @@
         // checks if the appeal has been accepted
         $checkaccepted = "SELECT accepted FROM appeals WHERE username = '$_SESSION[username]';";
         $resultofcheckaccepted = mysqli_query($conn, $checkaccepted);
-        
         $checknull = mysqli_num_rows($resultofcheckaccepted);
 
         if ($checknull > 0){
             $row = mysqli_fetch_assoc($resultofcheckaccepted);
             $accepted = $row['accepted'];
         } else {
-            $accepted = "null";
+            $accepted = "0";
         }
 
         echo "<br>";
