@@ -91,7 +91,7 @@
             $row = mysqli_fetch_assoc($resultofcheckaccepted);
             $accepted = $row['accepted'];
         } else {
-            $accepted = "0";
+            $accepted = "null";
         }
 
         echo "<br>";
@@ -105,10 +105,7 @@
         } else {
             echo "<h3>You have not submitted an appeal yet.</h3>";
         }
-    } 
-    // link to logout:
-    
-    ?>
+    } ?>
     
     
 </body>
