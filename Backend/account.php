@@ -13,15 +13,14 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     exit;
 };
 
-// checks if the user is banned by checking the sql database
-$checkbanned = "SELECT banned FROM users WHERE username = '$_SESSION[username]'";
-$resultofcheckbanned = mysqli_query($conn, $checkbanned);
-$row = mysqli_fetch_assoc($resultofcheckbanned);
-$banned = $row['banned'];
+require_once "Backend/checkbanned.php";
+$checksuperadmin = "SELECT admin FROM users WHERE username = '$_SESSION[username]';";
+$resultofchecksuperadmin = mysqli_query($conn, $checksuperadmin);
+$row = mysqli_fetch_assoc($resultofchecksuperadmin);
+$superadmin = $row['admin'];
 
-if ($banned == 1){
-    header("location: ../urbanned.php");
-
+if ($superadmin == 2){
+    header("location: superadmin.php");
 };
 
 
