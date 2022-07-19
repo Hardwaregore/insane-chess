@@ -105,7 +105,10 @@
         } else {
             echo "<h3>You have not submitted an appeal yet.</h3>";
         }
-    } ?>
+    } 
+    // link to logout:
+    echo "<br><a href='Backend/logout.php'>Rage Quit</a>";
+    ?>
     
     
 </body>
