@@ -13,7 +13,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     exit;
 };
 
-require_once "Backend/checkbanned.php";
+require_once "checkbanned.php";
 $checksuperadmin = "SELECT admin FROM users WHERE username = '$_SESSION[username]';";
 $resultofchecksuperadmin = mysqli_query($conn, $checksuperadmin);
 $row = mysqli_fetch_assoc($resultofchecksuperadmin);
