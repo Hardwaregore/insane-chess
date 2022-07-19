@@ -105,6 +105,7 @@
         } else {
             echo "<h3>You have not submitted an appeal yet.</h3>";
         }
+        echo "$appealed $rejected $rejectreason $accepted";
     } ?>
     
     
