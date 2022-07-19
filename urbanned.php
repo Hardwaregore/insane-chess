@@ -105,7 +105,6 @@
         } else {
             echo "<h3>Your appeal has been sent to staff. You will be unbanned once staff has reviewed your appeal.</h3>";
         }
-        echo "$appealed $rejected $rejectreason $accepted";
     } ?>
     
     
